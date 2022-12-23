@@ -1,0 +1,35 @@
+
+
+.button {
+    -fx-background-color: #5ca08e;
+    -fx-background-radius: 2 2 2 2;
+    -fx-font-size: 9pt;
+    -fx-font-family: "Comic Sans MS";
+}
+
+.button:hover {
+    -fx-background-color: #393B45;
+    -fx-text-fill: #FCFBF4;
+}
+
+.check-box {
+    -fx-font-size: 9pt;
+    -fx-font-family: "Comic Sans MS";
+}
+
+.root{
+    -fx-background-color: #B8D5CD;
+}
+
+.split-pane {
+    -fx-background-color: #D8D9DE;
+}
+
+.label{
+    -fx-font-size: 9pt;
+    -fx-font-family: "Comic Sans MS";
+}
+
+
+
+
