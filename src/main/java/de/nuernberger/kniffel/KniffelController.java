@@ -8,6 +8,9 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import java.io.File;
@@ -133,6 +136,11 @@ public class KniffelController implements Initializable {
         dices = new ImageView[]{imgDiceOne, imgDiceTwo, imgDiceThree, imgDiceFour, imgDiceFive};
         kniffelPort.resetDiceImages(dices);
         lblPlayerName.setText("1/"+kniffelPort.getPlayersLength());
+        btnShuffle.addEventHandler(KeyEvent.KEY_PRESSED, keyEvent -> {
+            if( keyEvent.getCode() == KeyCode.S){
+                shuffle();
+            }
+        });
     }
 
 }
