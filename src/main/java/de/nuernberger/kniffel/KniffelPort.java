@@ -8,6 +8,9 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.stage.Popup;
 import javafx.util.Duration;
 
 import java.io.*;
@@ -225,6 +228,10 @@ public class KniffelPort {
     public void shuffleRotation(Button btnShuffle, ImageView[] dices, MediaPlayer media){
         if (validator.canBeShuffled(players[currentPlayer],moves,setAButton,isCurrentlyShuffling)) {
             isCurrentlyShuffling = true;
+            Popup pop = new Popup();
+            pop.centerOnScreen();
+            pop.getContent().addAll(new Circle(25, 25, 50, Color.AQUAMARINE));
+            pop.show(KniffelApplication.Kniffelstage);
             RotateTransition diceRotation = new RotateTransition();
             media.stop();
             media.play();

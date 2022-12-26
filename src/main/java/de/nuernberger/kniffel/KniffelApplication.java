@@ -25,12 +25,15 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class KniffelApplication extends Application {
+
+    static Stage Kniffelstage;
     public static void main(String[] args) {
         launch();
     }
     @Override
     public void start(Stage stage){
         stage.setResizable(false);
+        Kniffelstage = stage;
         try{
             Image dice = new Image(new FileInputStream("src/main/resources/de/nuernberger/kniffel/dice/dice0.png"));
             choosePlayer(stage,dice);
@@ -54,7 +57,7 @@ public class KniffelApplication extends Application {
         stage.show();
         btnSetAmount.setOnAction(event -> {
             if (choiceAmount.getValue()!=null) {startGame(stage, Integer.parseInt(choiceAmount.getValue().toString()),dice);}
-            else {start(stage);}});
+            else{start(stage);}});
         btnInstructions.setOnAction(event -> instructionScene(stage));
     }
 
