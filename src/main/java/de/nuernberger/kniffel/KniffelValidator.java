@@ -135,7 +135,7 @@ public class KniffelValidator {
                 errorMessage.setText("Every dice is locked you can't shuffle ");
                 return false;
             }
-            errorMessage.setText("You can't shuffle anymore");
+            errorMessage.setText("You can't shuffle");
             return false;
         }
     }
